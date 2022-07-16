@@ -248,7 +248,7 @@ function HomePage(props) {
       })]
     }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(meetups_MeetupList, {
       meetups: props.meetups
-    }), ";"]
+    })]
   });
 }
 
@@ -271,8 +271,8 @@ async function getStaticProps() {
           id: mtps._id.toString()
         };
       })
-    } //revalidate: 10,
-
+    },
+    revalidate: 1
   };
 }
 /* export function getServerSideProps(context) {

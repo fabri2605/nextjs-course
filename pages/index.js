@@ -10,7 +10,7 @@ function HomePage(props) {
                 <title>NextJS Meetups</title>
                 <meta name='description' content='Some amazing meetups and collection for people of good!'></meta>
             </Head>
-            <MeetupList meetups={props.meetups} />;
+            <MeetupList meetups={props.meetups} />
         </React.Fragment>
     );
 }
@@ -40,7 +40,7 @@ export async function getStaticProps() {
                 };
             }),
         },
-        //revalidate: 10,
+        revalidate: 1,
     };
 }
 
