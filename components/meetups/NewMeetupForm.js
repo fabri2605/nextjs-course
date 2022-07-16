@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
+import Head from 'next/head';
 
 import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
@@ -28,6 +29,11 @@ function NewMeetupForm(props) {
   }
 
   return (
+    <React.Fragment>
+      <Head>
+        <title>Create Meetup</title>
+        <meta name='description' content='Create your own meetup and let the world see it'></meta>
+      </Head>
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
@@ -56,6 +62,7 @@ function NewMeetupForm(props) {
         </div>
       </form>
     </Card>
+    </React.Fragment>
   );
 }
 

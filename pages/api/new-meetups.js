@@ -2,7 +2,6 @@ import { MongoClient } from 'mongodb';
 
 async function handler(req, res) {
     if (req.method === 'POST') {
-        console.log('DATABASE');
         const data = req.body;
         const client = await MongoClient.connect(
             'mongodb+srv://leko:mongodb@cluster0.1dbtc.mongodb.net/meetups?retryWrites=true&w=majority'
